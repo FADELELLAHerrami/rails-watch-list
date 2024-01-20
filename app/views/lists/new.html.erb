@@ -1,0 +1,14 @@
+
+
+
+
+
+<div class="d-flex flex-column justify-content-center align-items-center mt-5">
+  <h1 class="h1 mb-3">Create a List</h1>
+  <%= form_with model: @list do |f| %>
+    <div class="form">
+      <%= f.text_field :name, placeholder: "list name" %>
+      <%= f.submit class:"btn btn-success" %>
+    </div>
+  <% end %>
+</div>

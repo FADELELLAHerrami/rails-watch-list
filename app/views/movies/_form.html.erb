@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+    <%= simple_form_for movie do |f|  %>
+      <div >
+          <%= f.input :title  %>
+          <%= f.input :overview  %>
+          <%= f.file_field :poster_url, as: :file  %>
+          <%= f.input :rating  %>
+          <%= f.button :submit  %>
+      </div>
+    <% end %>

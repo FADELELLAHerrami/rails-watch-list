@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+
+<div class="container mt-5">
+
+
+  <div class="d-flex align-items-center justify-content-between">
+    <h1>List of movies</h1>
+    <div>
+      <%= link_to "Add a movie", new_movie_path , :class => "btn btn-success rounded-pill text-white"%>
+      <%= link_to "Movie List", new_movie_path , :class => "btn btn-success rounded-pill text-white"%>
+
+    </div>
+  </div>
+  <hr>
+  <div class="row gx-5" >
+
+    <% @movies.each do |movie|%>
+
+    <div class="col-lg-4 d-flex mt-5 mb-5">
+      <%# <% link_to "",  %>
+        <div class="card" style="width: 18rem;">
+        <img src="<%= movie.poster_url %>" class="card-img-top">
+          <div class="card-body">
+
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text" style="color: black;"><%= movie.overview %><b><%= link_to " . . .", movie_path(movie), {:style=>'color:blue;text-decoration: none;', :class => "css_class"} %></b></p>
+
+            <span class="movie_info float-right "><i class="fa-solid fa-star" style="color: #FFD43B;"></i> <%= movie.rating %></span>
+          </div>
+        </div>
+
+    </div>
+
+    <% end %>
+
+
+
+    </div>
